@@ -14,6 +14,7 @@ describe('Demoblaze', () => {
 
       // Click the logout button
       cy.get("#logout2").click()
+      cy.get('#login2').should("be.visible")
 
       })
   })
