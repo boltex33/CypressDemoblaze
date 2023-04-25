@@ -12,10 +12,11 @@ describe("Demoblaze", () => {
         cy.get('#loginpassword').type('boltex98').should('have.value', 'boltex98')
         cy.get("button").contains("Log in").click()
     
-        // Test that the user can navigate among the application pages
+        // Go to second page
         cy.wait(3000)
         cy.get("#next2").click()
-        
+
+        // Click on a product from the second page and add it to cart
         cy.contains('MacBook air').click()
         cy.contains('Add to cart').click()
 
